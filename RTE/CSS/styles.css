@@ -1,0 +1,136 @@
+/* Estilo general del formulario */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #e7f0ff, #cce5ff); /* Fondo degradado */
+}
+
+/* Estilo para el formulario en una cuadrícula */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+
+/* Estilo para cada columna */
+.form-column {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #b3d7ff;
+    border-radius: 8px;
+}
+
+/* Eliminar el borde izquierdo en la primera columna */
+.form-column:first-child {
+    border-left: none;
+}
+
+/* Eliminar el borde derecho en la última columna */
+.form-column:last-child {
+    border-right: none;
+}
+
+/* Estilo para el encabezado de cada sección */
+.form-column h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+/* Estilo para los grupos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas del formulario */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Estilo para los campos de entrada */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #b3d7ff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilo para los campos de entrada al tener foco */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Estilo para el botón de descarga */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .form-column {
+        border: none;
+    }
+
+    .form-column h3 {
+        font-size: 1.2em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
